@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from "./pages/homepage";
+import { GpCircuitsPage } from "./pages/gpSelectCircuit";
+import { Navigation } from "./pages/navigation";
+// L'usage de ReactRouter est nécessaire (paquet npm => npm i react-router-dom)
+// Pour comprendre l'utilisation de React Router et ici de BrowserRouter, lire cette ressource:
+// https://github.com/remix-run/react-router/blob/main/docs/getting-started/installation.md 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Navigation/>}>
+        <Route index element={<Home/>}/>
+        {/* Rappel: si je veux créer un ensemble de subroutes je fais 'circuits-de-groupe/*' */}
+        <Route path="circuits-de-groupe" element={<GpCircuitsPage/>}/>
+        </Route>
+      </Routes>
+
     </div>
-  );
+  )
 }
 
-export default App;
+
+export default App; 
