@@ -1,5 +1,6 @@
 /* import Register from './components/Register'; */
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
 
@@ -14,9 +15,12 @@ const AppContainer = styled.div`
 
 function App() {
   return (
-    <AppContainer>
-      <AccountBox />
-    </AppContainer>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/login" element={<AppContainer><AccountBox /></AppContainer>} />
+      
+    </Routes>
+  </BrowserRouter>
   );
 }
 
