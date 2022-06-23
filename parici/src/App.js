@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/homepage";
 import { GpCircuitsPage } from "./pages/gpSelectCircuit";
@@ -7,17 +8,19 @@ import { Navigation } from "./pages/navigation";
 // https://github.com/remix-run/react-router/blob/main/docs/getting-started/installation.md 
 
 function App() {
+
   return (
+    
     <div className="App">
-      <Routes>
+        <Routes>
         <Route path="/" element={<Navigation/>}>
         <Route index element={<Home/>}/>
         {/* Rappel: si je veux créer un ensemble de subroutes je fais 'circuits-de-groupe/*' */}
         <Route path="circuits-de-groupe" element={<GpCircuitsPage/>}/>
         </Route>
       </Routes>
-
     </div>
+  
   )
 }
 

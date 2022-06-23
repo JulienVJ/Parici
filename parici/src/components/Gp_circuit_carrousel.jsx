@@ -1,3 +1,4 @@
+import React from 'react';
 import GpCircuitsCard from "./Gp_circuit_card";
 
 export const GpCircuitsCarrousel = () => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/Gp_circuit_card.css";
 
 export const GpCircuitsCard = () => {
@@ -11,7 +12,7 @@ export const GpCircuitsCard = () => {
             id_circuit:1,
             title:"tour des patissiers",
             place: "Notre Dame",
-            date: new Date(),
+            date: "22/10/2022",
             // Il faudra rendre cette propriété dynamique selon les inscriptions
             subscribers:5,
             subscribersMax:10,
@@ -34,23 +35,24 @@ export const GpCircuitsCard = () => {
 
     return(
         <div className="gp-card-container">
-            {selectedGpCircuits.map((selectedCard) => (
-                    <div key={selectedCard.id}>
+            {/* {selectedGpCircuits.map((selectedCard) => ( */}
+                    <div>
                         <div className="gp-circuit-card-header">
-                            <div>{selectedCard.map}</div>
+                            <div>{}</div>
                             <div  className="title">
-                                <h1>{selectedCard.title}</h1>
+                                <h1>{}</h1>
                             </div>
                         </div>
                         <ul className="gp-circuit-card-infos">
-                            <li>{selectedCard.place}</li>
-                            <li>{selectedCard.date}</li>
-                            <li>{selectedCard.subscribers}/{selectedCard.subscribersMax}</li>
+                            <li>{}</li>
+                            <li>{}</li>
+                            <li>{}/{}</li>
                         </ul>
                         <div className="gp-card-order">
-                            <h1>{selectedCard.num}/{SelectionLength}</h1>
+                            <h1>{}/{SelectionLength}</h1>
                         </div>
-                    </div>))};           
+                    </div>
+                    {/* ))};            */}
         </div>   
     )
 }

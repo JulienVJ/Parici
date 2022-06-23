@@ -1,4 +1,4 @@
-
+import React from 'react';
 import {  GpCircuitsCarrousel } from "../components/Gp_circuit_carrousel";
 
 export function GpCircuitsPage(){
