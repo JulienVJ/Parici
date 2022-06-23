@@ -1,0 +1,685 @@
+{
+    "nhits": 2503,
+    "parameters": {
+        "dataset": "coronavirus-commercants-parisiens-livraison-a-domicile",
+        "rows": 10,
+        "start": 0,
+        "facet": [
+            "code_postal",
+            "type_de_commerce",
+            "fabrique_a_paris",
+            "services"
+        ],
+        "format": "json",
+        "timezone": "UTC"
+    },
+    "records": [
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "b87e955998e1242f53ebdcab67d6b25053171b74",
+            "fields": {
+                "type_de_commerce": "Artisanat d'art",
+                "nom_du_commerce": "Laurette Broll Ceramic",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75020",
+                "geo_point_2d": [
+                    48.86460284575503,
+                    2.393829116038252
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.393829116038252,
+                        48.86460284575503
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "oui",
+                "description": "Boutique - Atelier de céramique.\nFabrication et vente sur place d'art de la table et objets de décoration en grès. L'atelier offre une très large palette de couleur d'émaux.",
+                "site_internet": "https://www.laurettebroll.com",
+                "mail": "laurettebroll@gmail.com",
+                "telephone": "06 78 30 80 19",
+                "adresse": "47 avenue Gambetta"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.393829116038252,
+                    48.86460284575503
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "58c33e84b01eaa63f3de12c2c3f125bac8e4cb7c",
+            "fields": {
+                "type_de_commerce": "Équipements informatiques",
+                "nom_du_commerce": "Boulanger",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75018",
+                "geo_point_2d": [
+                    48.88334713891357,
+                    2.345423415244773
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.345423415244773,
+                        48.88334713891357
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Téléphonie _ Informatique - Image - Son - Petit et gros électroménager disponible en magasin, en retrait ou en livraison",
+                "site_internet": "https://www.boulanger.com/magasins/ile-de-france/paris/paris/56-boulevard-de-rochechouart",
+                "mail": "caisses-montmartre@boulanger.com",
+                "adresse": "56 boulevard de rochechouart"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.345423415244773,
+                    48.88334713891357
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "38af8ca053ad329fd32134cbe1e0e5be371decf5",
+            "fields": {
+                "type_de_commerce": "Librairie",
+                "nom_du_commerce": "Paul Beuscher",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75004",
+                "geo_point_2d": [
+                    48.85558446983995,
+                    2.368288637114569
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.368288637114569,
+                        48.85558446983995
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Librairie musicale & Instruments de musique à Paris 4 depuis 1850. \n1000 m² de surface pour trouver l'instrument ou la partition de musique que vous recherchez et tout cela dans une ambiance agréable.",
+                "site_internet": "https://www.paul-beuscher.com/",
+                "mail": "contact.site@paul-beuscher.com",
+                "adresse": "27 boulevard Beaumarchais"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.368288637114569,
+                    48.85558446983995
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "f2bf09dad75e79c78c73d3019d4bbef7995fe86a",
+            "fields": {
+                "type_de_commerce": "Cosmétique",
+                "nom_du_commerce": "savonnerie Ciment Paris",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75011",
+                "geo_point_2d": [
+                    48.866259379398755,
+                    2.373987600791877
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.373987600791877,
+                        48.866259379398755
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Nous fabriquons sur place et vendons nos savons solides. Ils sont bio, surgras et sans allergènes. ils conviennent à toute la famille.",
+                "site_internet": "http://www.ciment.paris",
+                "mail": "jeremy@ciment.paris",
+                "telephone": "06 81 38 78 69",
+                "adresse": "100 av parmentier"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.373987600791877,
+                    48.866259379398755
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "5e7deb610165f4f4d6f960458b2444b338effb8e",
+            "fields": {
+                "type_de_commerce": "Épicerie fine",
+                "nom_du_commerce": "DA GIULIA ALIMENTARI",
+                "services": "Retrait de commandes en magasin",
+                "code_postal": "75012",
+                "geo_point_2d": [
+                    48.83831860336796,
+                    2.403828922401194
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.403828922401194,
+                        48.83831860336796
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Epicerie Fine Italienne\nPlats préprarés, desserts, antipasti, charcuterie, fromage, épicerie, vins etc...",
+                "site_internet": "https://www.dagiulia.paris",
+                "mail": "epicerie@dagiulia.paris",
+                "adresse": "95 avenue du Général Michel Bizot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.403828922401194,
+                    48.83831860336796
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "2f7bd632dadfeff5d6da302243ad8b0a4578c4b2",
+            "fields": {
+                "type_de_commerce": "Restaurant ou traiteur",
+                "nom_du_commerce": "L'Athanor pizza bio",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75020",
+                "geo_point_2d": [
+                    48.85641183283621,
+                    2.396047831821826
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.396047831821826,
+                        48.85641183283621
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "L'Athanor propose des pizzas, des plats du jour, salades et desserts bio, fait maison avec des produits frais",
+                "mail": "Lathanor63@gmail.com",
+                "telephone": "09 83 04 11 24",
+                "adresse": "63 rue Planchat"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.396047831821826,
+                    48.85641183283621
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "687390e08a606160897c221beb6b3d0672cb3099",
+            "fields": {
+                "type_de_commerce": "Restaurant ou traiteur",
+                "nom_du_commerce": "Osaka",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75016",
+                "geo_point_2d": [
+                    48.84122824444803,
+                    2.26548558019273
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.26548558019273,
+                        48.84122824444803
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Nous acceptons la livraison d'une distance inférieur à 2km. Commandez sur osaka75016.fr.",
+                "site_internet": "http://osaka75016.fr",
+                "mail": "litefan@hotmail.com",
+                "telephone": "01 45 25 60 29",
+                "adresse": "1 Rue Jouvenet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.26548558019273,
+                    48.84122824444803
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "58f46ebe041808cf677ec5014ee81e52fbc46a8c",
+            "fields": {
+                "type_de_commerce": "Boulangerie - pâtisserie",
+                "precisions": "SALON DE THÉ- RESTAURATION",
+                "nom_du_commerce": "LES ARTS GOURMANDS",
+                "services": "Retrait de commandes en magasin",
+                "code_postal": "75006",
+                "geo_point_2d": [
+                    48.853327633128124,
+                    2.342581454655944
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.342581454655944,
+                        48.853327633128124
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "FAIT MAISON EN SALÉ :QUICHE AUX LÉGUMES OU À LA VIANDE, CROQUE MONSIEUR, \nPART DE PIZZA, HOTDOG,SANDWISH A LA DEMANDE, FRITES MAISON,INDIVIDUEL OU SUR COMMANDE POUR GROUPE OU PLUSIEURS PERSONNES",
+                "mail": "boulangerie.bouzelmat75@gmail.com",
+                "telephone": "07 58 25 21 35",
+                "adresse": "26 rue Saint André des Arts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.342581454655944,
+                    48.853327633128124
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "1483305ad6908c2b4f667bb1cab9b8e12b817ccf",
+            "fields": {
+                "type_de_commerce": "Alimentation générale et produits de première nécessité",
+                "nom_du_commerce": "SITIS MARKET",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75017",
+                "geo_point_2d": [
+                    48.89189709934789,
+                    2.318660840668159
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.318660840668159,
+                        48.89189709934789
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "nous sommes une suprette. Nous faisons la livraison nous memes et via Deliveroo et ubereats.\nretrait de commandes en magasin aussi.",
+                "mail": "shagane75017@gmail.com",
+                "telephone": "01 42 26 04 21",
+                "adresse": "3, rue pouchet"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.318660840668159,
+                    48.89189709934789
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        },
+        {
+            "datasetid": "coronavirus-commercants-parisiens-livraison-a-domicile",
+            "recordid": "e128a81e2825618913414c2e96427151735bc0fc",
+            "fields": {
+                "type_de_commerce": "Fleuriste",
+                "nom_du_commerce": "Fioretti",
+                "services": "Livraisons à domicile, Retrait de commandes en magasin",
+                "code_postal": "75019",
+                "geo_point_2d": [
+                    48.88182864777059,
+                    2.3716055304058
+                ],
+                "geo_shape": {
+                    "coordinates": [
+                        2.3716055304058,
+                        48.88182864777059
+                    ],
+                    "type": "Point"
+                },
+                "fabrique_a_paris": "non",
+                "description": "Fioretti est un artisan fleuriste de quartier qui propose des fleurs françaises de saison.",
+                "site_internet": "https://fiorettiparis.fr",
+                "mail": "fiorettiparis@gmail.com",
+                "telephone": "09 81 71 62 69",
+                "adresse": "18 avenue secrétan"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.3716055304058,
+                    48.88182864777059
+                ]
+            },
+            "record_timestamp": "2022-06-21T17:10:06.722Z"
+        }
+    ],
+    "facet_groups": [
+        {
+            "name": "code_postal",
+            "facets": [
+                {
+                    "name": "75011",
+                    "count": 238,
+                    "state": "displayed",
+                    "path": "75011"
+                },
+                {
+                    "name": "75015",
+                    "count": 186,
+                    "state": "displayed",
+                    "path": "75015"
+                },
+                {
+                    "name": "75012",
+                    "count": 172,
+                    "state": "displayed",
+                    "path": "75012"
+                },
+                {
+                    "name": "75017",
+                    "count": 171,
+                    "state": "displayed",
+                    "path": "75017"
+                },
+                {
+                    "name": "75014",
+                    "count": 166,
+                    "state": "displayed",
+                    "path": "75014"
+                },
+                {
+                    "name": "75018",
+                    "count": 166,
+                    "state": "displayed",
+                    "path": "75018"
+                },
+                {
+                    "name": "75010",
+                    "count": 146,
+                    "state": "displayed",
+                    "path": "75010"
+                },
+                {
+                    "name": "75009",
+                    "count": 125,
+                    "state": "displayed",
+                    "path": "75009"
+                },
+                {
+                    "name": "75013",
+                    "count": 124,
+                    "state": "displayed",
+                    "path": "75013"
+                },
+                {
+                    "name": "75020",
+                    "count": 123,
+                    "state": "displayed",
+                    "path": "75020"
+                },
+                {
+                    "name": "75006",
+                    "count": 121,
+                    "state": "displayed",
+                    "path": "75006"
+                },
+                {
+                    "name": "75016",
+                    "count": 103,
+                    "state": "displayed",
+                    "path": "75016"
+                },
+                {
+                    "name": "75005",
+                    "count": 95,
+                    "state": "displayed",
+                    "path": "75005"
+                },
+                {
+                    "name": "75003",
+                    "count": 90,
+                    "state": "displayed",
+                    "path": "75003"
+                },
+                {
+                    "name": "75008",
+                    "count": 90,
+                    "state": "displayed",
+                    "path": "75008"
+                },
+                {
+                    "name": "75019",
+                    "count": 90,
+                    "state": "displayed",
+                    "path": "75019"
+                },
+                {
+                    "name": "75004",
+                    "count": 86,
+                    "state": "displayed",
+                    "path": "75004"
+                },
+                {
+                    "name": "75007",
+                    "count": 82,
+                    "state": "displayed",
+                    "path": "75007"
+                },
+                {
+                    "name": "75002",
+                    "count": 74,
+                    "state": "displayed",
+                    "path": "75002"
+                },
+                {
+                    "name": "75001",
+                    "count": 55,
+                    "state": "displayed",
+                    "path": "75001"
+                }
+            ]
+        },
+        {
+            "name": "type_de_commerce",
+            "facets": [
+                {
+                    "name": "Restaurant ou traiteur",
+                    "count": 702,
+                    "state": "displayed",
+                    "path": "Restaurant ou traiteur"
+                },
+                {
+                    "name": "Autre",
+                    "count": 375,
+                    "state": "displayed",
+                    "path": "Autre"
+                },
+                {
+                    "name": "Boucherie - charcuterie - rôtisserie",
+                    "count": 169,
+                    "state": "displayed",
+                    "path": "Boucherie - charcuterie - rôtisserie"
+                },
+                {
+                    "name": "Primeur",
+                    "count": 153,
+                    "state": "displayed",
+                    "path": "Primeur"
+                },
+                {
+                    "name": "Alimentation générale et produits de première nécessité",
+                    "count": 151,
+                    "state": "displayed",
+                    "path": "Alimentation générale et produits de première nécessité"
+                },
+                {
+                    "name": "Librairie",
+                    "count": 137,
+                    "state": "displayed",
+                    "path": "Librairie"
+                },
+                {
+                    "name": "Caviste - Brasserie",
+                    "count": 123,
+                    "state": "displayed",
+                    "path": "Caviste - Brasserie"
+                },
+                {
+                    "name": "Boulangerie - pâtisserie",
+                    "count": 120,
+                    "state": "displayed",
+                    "path": "Boulangerie - pâtisserie"
+                },
+                {
+                    "name": "Épicerie fine",
+                    "count": 102,
+                    "state": "displayed",
+                    "path": "Épicerie fine"
+                },
+                {
+                    "name": "Artisanat d'art",
+                    "count": 101,
+                    "state": "displayed",
+                    "path": "Artisanat d'art"
+                },
+                {
+                    "name": "Fromagerie",
+                    "count": 78,
+                    "state": "displayed",
+                    "path": "Fromagerie"
+                },
+                {
+                    "name": "Fleuriste",
+                    "count": 54,
+                    "state": "displayed",
+                    "path": "Fleuriste"
+                },
+                {
+                    "name": "Poissonnerie",
+                    "count": 45,
+                    "state": "displayed",
+                    "path": "Poissonnerie"
+                },
+                {
+                    "name": "Jouets - Jeux",
+                    "count": 33,
+                    "state": "displayed",
+                    "path": "Jouets - Jeux"
+                },
+                {
+                    "name": "Chocolaterie - Pâtisserie",
+                    "count": 32,
+                    "state": "displayed",
+                    "path": "Chocolaterie - Pâtisserie"
+                },
+                {
+                    "name": "Cosmétique",
+                    "count": 26,
+                    "state": "displayed",
+                    "path": "Cosmétique"
+                },
+                {
+                    "name": "Pharmacies et parapharmacies",
+                    "count": 24,
+                    "state": "displayed",
+                    "path": "Pharmacies et parapharmacies"
+                },
+                {
+                    "name": "Disquaire",
+                    "count": 19,
+                    "state": "displayed",
+                    "path": "Disquaire"
+                },
+                {
+                    "name": "Équipements informatiques",
+                    "count": 15,
+                    "state": "displayed",
+                    "path": "Équipements informatiques"
+                },
+                {
+                    "name": "Bricolage",
+                    "count": 13,
+                    "state": "displayed",
+                    "path": "Bricolage"
+                },
+                {
+                    "name": "Presse et papeterie",
+                    "count": 12,
+                    "state": "displayed",
+                    "path": "Presse et papeterie"
+                },
+                {
+                    "name": "Articles médicaux et orthopédiques",
+                    "count": 10,
+                    "state": "displayed",
+                    "path": "Articles médicaux et orthopédiques"
+                },
+                {
+                    "name": "Blanchisserie-teinturerie",
+                    "count": 7,
+                    "state": "displayed",
+                    "path": "Blanchisserie-teinturerie"
+                },
+                {
+                    "name": "Epicerie fine",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Epicerie fine"
+                },
+                {
+                    "name": "Matériels de télécommunication",
+                    "count": 1,
+                    "state": "displayed",
+                    "path": "Matériels de télécommunication"
+                }
+            ]
+        },
+        {
+            "name": "fabrique_a_paris",
+            "facets": [
+                {
+                    "name": "non",
+                    "count": 2411,
+                    "state": "displayed",
+                    "path": "non"
+                },
+                {
+                    "name": "oui",
+                    "count": 92,
+                    "state": "displayed",
+                    "path": "oui"
+                }
+            ]
+        },
+        {
+            "name": "services",
+            "facets": [
+                {
+                    "name": "Livraisons à domicile",
+                    "count": 985,
+                    "state": "displayed",
+                    "path": "Livraisons à domicile"
+                },
+                {
+                    "name": "Livraisons à domicile, Retrait de commandes en magasin",
+                    "count": 905,
+                    "state": "displayed",
+                    "path": "Livraisons à domicile, Retrait de commandes en magasin"
+                },
+                {
+                    "name": "Retrait de commandes en magasin",
+                    "count": 612,
+                    "state": "displayed",
+                    "path": "Retrait de commandes en magasin"
+                }
+            ]
+        }
+    ]
+}
