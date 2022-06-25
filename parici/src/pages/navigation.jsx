@@ -18,7 +18,7 @@ export function Navigation() {
                     <Link className='nav-link' to='/'>
                         ACCUEIL
                     </Link>
-                    <Link className='nav-link' to='/circuits-de-groupe'>
+                    <Link className='nav-link' to='circuits-de-groupe'>
                         GROUPES
                     </Link>
                 </div>

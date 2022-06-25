@@ -1,60 +1,65 @@
 import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { MdArrowBackIos, MdArrowForwardIos, MdOutlineShare } from "react-icons/md";
+
+import { SliderData } from './SliderData';
 import "../styles/Gp_circuit_card.css";
+import "../styles/Gp_circuit_carrousel.css";
 
-export const GpCircuitsCard = () => {
 
-    // On utilisera de l'info acquis depuis le contexte tandis que certaines sont spécifiques ....
+const GpCircuitsSlider = ({ slides }) => {
 
-    // Temporary information base que l'on "chargera" des sélections effectués via les filtres: 
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-    const selectedGpCircuits = [
-        {
-            id_circuit:1,
-            title:"tour des patissiers",
-            place: "Notre Dame",
-            date: "22/10/2022",
-            // Il faudra rendre cette propriété dynamique selon les inscriptions
-            subscribers:5,
-            subscribersMax:10,
-            map: "a map",
-            num:1
-        
-        },
-        {
-            id_circuit:2,
-            title: "ballade des artisans",
-            place: "Devant l'école HETIC",
-            date: new Date(),
-            // Il faudra rendre cette propriété dynamique selon les inscriptions
-            subscribers:5,
-            subscribersMax:10,
-        }
-    ];
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
-    const SelectionLength = selectedGpCircuits.length;
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
-    return(
-        <div className="gp-card-container">
-            {/* {selectedGpCircuits.map((selectedCard) => ( */}
-                    <div>
-                        <div className="gp-circuit-card-header">
-                            <div>{}</div>
-                            <div  className="title">
-                                <h1>{}</h1>
-                            </div>
-                        </div>
-                        <ul className="gp-circuit-card-infos">
-                            <li>{}</li>
-                            <li>{}</li>
-                            <li>{}/{}</li>
-                        </ul>
-                        <div className="gp-card-order">
-                            <h1>{}/{SelectionLength}</h1>
-                        </div>
-                    </div>
-                    {/* ))};            */}
-        </div>   
-    )
-}
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
 
-export default GpCircuitsCard;
+  return (
+    <section className='slider'>
+      <MdArrowBackIos className='left-arrow' onClick={prevSlide} />
+      <MdArrowForwardIos className='right-arrow' onClick={nextSlide} />
+      {SliderData.map((slide, index) => {
+
+        const navigate = useNavigate();
+        const onNavigateHandler = () => navigate(slide.route);
+
+        return (
+          <div
+            className={index === current ? 'slide active' : 'slide'}
+            key={index}>
+            {index === current && (
+            <div className="carousel-wrapper">
+                <div className="map-wrapper">
+                    <span><MdOutlineShare/></span>
+                    <img src={slide.map} alt='circuit en groupe' className='map' />
+                    <div className='title-wrapper'><h1>{slide.title}</h1></div>
+                </div>
+                <div className="information-wrapper">
+                    <h2> Départ: {slide.departure}</h2>
+                    <h2> Date: {slide.date}</h2>
+                    <h2> Participants: {slide.Subscribers}/{slide.totalNumber}</h2>
+                </div>
+                <div className="btn"  onClick={onNavigateHandler}>En savoir plus</div>
+                <div className="gp_counter"><h1>{SliderData.indexOf(slide)+1}/{SliderData.length}</h1></div>
+            </div>
+            
+            )}
+          </div>
+        );
+      })}
+    </section>
+  );
+};
+
+export default GpCircuitsSlider;

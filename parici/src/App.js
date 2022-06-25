@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/homepage";
-import { GpCircuitsPage } from "./pages/gpSelectCircuit";
+import { GpCircuitsPage } from "./pages/gpSelectCircuitPage";
 import { Navigation } from "./pages/navigation";
 // L'usage de ReactRouter est nécessaire (paquet npm => npm i react-router-dom)
 // Pour comprendre l'utilisation de React Router et ici de BrowserRouter, lire cette ressource:
