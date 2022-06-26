@@ -1,3 +1,4 @@
+@import 'base.css';
 
   .slide {
     display:flex;
@@ -10,7 +11,6 @@
   .slide.active {
     opacity: 1;
     transition-duration: 1s;
-    /* transform: scale(1.08); */
   }
   
   .carousel-wrapper {
@@ -61,7 +61,7 @@
     padding: 0.2em 0;
     background-color: #fff;
     opacity: 0.9;
-    border: 1px solid #0054A3;
+    border: 1.5px solid #0054A3;
     border-radius: 10px;
     transform: translateY(30%);
     text-align: center;

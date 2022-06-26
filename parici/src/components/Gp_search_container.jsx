@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/Gp_search_container.css";
 import { TbAdjustments } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 export const SearchGpCircuits = () => {
 
@@ -9,8 +10,7 @@ export const SearchGpCircuits = () => {
             <div>
                 <h1>Rechercher un groupe</h1>
                 <div className="gp-filter-section">
-                    <h2>Mes filtres:</h2>
-                    <span><TbAdjustments /></span>
+                    <span><Link to="filtres"><TbAdjustments className="gp-filter-circuits" /></Link></span>
                 </div>
             </div>
 

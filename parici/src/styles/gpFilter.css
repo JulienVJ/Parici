@@ -1,0 +1,42 @@
+@import 'base.css';
+
+
+.gp-filter-main {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.gp-filters-container {
+    margin-top:1em;
+    width:80%;
+}
+
+.gp-filters-container h2 {
+    font-size: 1.2em;
+    margin-left:0.5em;
+}
+
+.gp-filter-zones, .gp-filter-themes {
+    margin-top:1em;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.gp-filter-zones li,  .gp-filter-themes li {
+    list-style: none;
+    font-size: 0.8em;
+    padding: 0.5em;
+    border: 1px solid #0054A3;
+    border-radius: 10px;
+}
+
+.gp-filter-zones li:hover,  .gp-filter-themes li:hover {
+    cursor: pointer;
+    background-color: #0054A3;
+    border:none;
+    color:#fff;
+}

@@ -1,0 +1,95 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    min-width: 300px;
+    max-width: 360px;
+    height: 5%;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+    border-radius: 60px;
+    overflow: hidden;
+  }
+
+  .subscription {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .subscription .add-pseudo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+  }
+  
+  .subscription .gp-enrolled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100% - 2px);
+    width: 100px;
+    border: none;
+    border-radius: 60px;
+    outline: none;
+    margin: 1px;
+    padding: 0 20px;
+    cursor: pointer;
+    background: #4ABEBB;
+    color: #FFFFFF;
+    transition: width .35s ease-in-out,
+    background .35s ease-in-out;
+  }
+  
+  .subscription.done .gp-enrolled {
+    width: calc(100% - 2px);
+    background: #C0E02E;
+  }
+  
+  .subscription .gp-enrolled .before-submit,
+  .subscription .gp-enrolled .after-submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 38px;
+    transition: visibility .35s ease-in-out,
+      opacity .35s ease-in-out;
+  }
+  
+  .subscription.done .gp-enrolled .before-submit,
+  .subscription:not(.done) .gp-enrolled .after-submit {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .subscription .gp-enrolled .after-submit {
+    transition-delay: .35s;
+  }
+  
+  .subscription:not(.done) .gp-enrolled .before-submit,
+  .subscription.done .gp-enrolled .after-submit {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .message {
+    margin:3em 3em;
+    font-size: 1em;
+    color: #0054A3;
+  }

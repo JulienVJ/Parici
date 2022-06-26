@@ -5,6 +5,7 @@ import { GpCircuitsPage } from "./pages/gpCarrouselPage";
 import { Navigation } from "./pages/navigation";
 import { GpCircuitDescription } from "./components/Gp_description_circuit";
 import { GpSubscribe } from "./components/Gp_subscribe";
+import { GpFilterPage } from "./pages/gpFilterPage";
 
 // L'usage de ReactRouter est nécessaire (paquet npm => npm i react-router-dom)
 // Pour comprendre l'utilisation de React Router et ici de BrowserRouter, lire cette ressource:
@@ -117,9 +118,10 @@ function App() {
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
           {/* Rappel: si je veux créer un ensemble de subroutes je fais 'circuits-de-groupe/*' */}
+          <Route path="circuits-de-groupe/filtres" element={<GpFilterPage />} />
           <Route path="circuits-de-groupe/*" element={<GpCircuitsPage slides={SliderData} />} />
           <Route path="circuits-de-groupe/:route" element={<GpCircuitDescription data={SliderData}/>} />
-          <Route path="circuits-de-groupe/:route/:subscribe" element={<GpSubscribe/>} />
+          <Route path="circuits-de-groupe/:route/:subscribe" element={<GpSubscribe data={SliderData}/>} />
         </Route>
       </Routes>
     </div>
