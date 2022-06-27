@@ -36,9 +36,9 @@ export const BoldError = styled.h1`
   font-weight: 500;
   margin: 0 4px;
 `;
-export const BoldSuccess = styled.h1`
+export const BoldStatus = styled.h1`
 font-size: 11px;
-  color: green;
+  color: red;
   font-weight: 500;
   margin: 0 4px;
 `

@@ -7,17 +7,21 @@
 }
 
 body{
-  background-image: url('./assets/imgRegister.jpg');
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
-  
+  margin: 0;
+  padding: 0;
 }
 .blocIcon{
   display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     column-gap: .7em;
+}
+.bodycontain{
+  height: 100vh;
+  background-image: url('./assets/imgRegister.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 .logo{
   z-index: 10;

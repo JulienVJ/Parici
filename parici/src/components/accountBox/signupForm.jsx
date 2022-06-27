@@ -21,14 +21,22 @@ export function SignupForm(props) {
 
   const { switchToSignin } = useContext(AccountContext);
   const register = () => {
-      Axios.post("http://localhost:3000/user/register", {
+    const data = { pseudo: pseudoReg, password: passwordReg };
+      Axios.post("http://localhost:3000/user/register",{
           pseudo: pseudoReg,
           password: passwordReg,
       })
       .then((response) =>{
-        switchToSignin()
-        console.log(response);
+        if(response.data.error) {
+            alert(response.data.error);
+        } else {
+            /* localStorage.setItem("accessToken", response.data.accessToken); */
+            switchToSignin()
+        }
+        
+        
       });
+      
   };
   return (
     <BoxContainer>

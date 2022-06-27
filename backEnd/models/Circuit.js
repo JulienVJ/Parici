@@ -24,7 +24,7 @@ module.exports = (dbinfo, Sequelize) => {
             },
             arrondissement: {
                 type: Sequelize.DataTypes.TEXT,
-                allowNull: false
+                allowNull: true
             },
             image_circuit: {
                 type: Sequelize.DataTypes.TEXT,

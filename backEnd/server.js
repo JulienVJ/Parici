@@ -17,6 +17,8 @@ app.use(BodyParser.json());
 
 
 app.use("/user", require("./router/user"));
+app.use("/circuit", require("./router/circuit"));
+
 
 
 app.listen(port, hostname, function() {

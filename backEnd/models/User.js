@@ -26,6 +26,7 @@ module.exports = (dbinfo, Sequelize) => {
                 type: Sequelize.DataTypes.TEXT,
                 allowNull: true
             },
+          
 
         }, {
             /**

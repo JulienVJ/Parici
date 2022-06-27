@@ -4,7 +4,7 @@ var router = express.Router();
 var bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 var axios = require("axios");
-
+const { validateToken } = require("../middlewares/AuthMiddlewares");
 process.env.SECRET_KEY = 'secret';
 
 router.post("/register", (req, res) => {
@@ -28,12 +28,12 @@ router.post("/register", (req, res) => {
                 }) */
                 // si ça c'est bien passé crée moi un token
                 .then(useritem => {
-                        let token = jwt.sign(useritem.dataValues,
+                        let accessToken = jwt.sign(useritem.dataValues,
                             process.env.SECRET_KEY, {
                                 expiresIn: 1440
                             });
 
-                        res.status(200).json({ token: token })
+                        res.json({accessToken: accessToken});
 
                     })
                     // renvoie moi l'erreur
@@ -42,7 +42,7 @@ router.post("/register", (req, res) => {
                     })
             // s'il existe déja
             } else {
-                res.json("user déjà dans la base de donnée");
+                res.json({error: "user déjà dans la base de donnée"});
             }
         })
 
@@ -52,8 +52,8 @@ router.post("/register", (req, res) => {
 
 });
 
-router.post("/login", (req, res) => {
-    console.log(req.body)
+// router.post("/login", (req, res) => {
+router.post("/auth", (req, res) =>{
     db.user.findOne({
             where: {
                 pseudo: req.body.pseudo
@@ -63,22 +63,28 @@ router.post("/login", (req, res) => {
             if (user) {
                 // tu me compare le mot de passe entre et celui qui est dans ma base de donner
                 if (bcrypt.compareSync(req.body.password, user.password)) {
-                   
-                    // tu m'envoie statu 200 si ses bon 
-                    res.status(200.).send({message: 'success login'})
+                    //  Nous créons un jeton d'authentification pour l'utilisateur avec le jwt
+                    let accessToken = jwt.sign(user.dataValues,
+                        process.env.SECRET_KEY, {
+                            expiresIn: 1440
+                        });
+
+                    res.json({accessToken: accessToken, pseudo: user.pseudo, id_user: user});
+                    /* res.json(accessToken); */
+
                 } else {
-                    res.send({message: 'message erreur ou mot de passe erreur'})
+                    res.send({error: "mot de passe incorrect"})
                 }
             } else {
-                res.send({message: "error"})
+                res.send({error: "Utilisateur n'existe pas ou votre pseudo  est incorrect"})
             }
         })
         .catch(err => {
-            res.send({message: 'error ' + err})
+            console.log(err);
+            res.send({error: 'error ', err})
         })
 
 });
-
 
 router.put('/update/:id_user', (req, res) => {
     db.user.findOne({
@@ -119,17 +125,17 @@ router.put('/update/:id_user', (req, res) => {
         })
 })
 
-router.get("/profil/:id_user", (req, res) => {
+router.get("/profile/:id_user", (req, res) => {
     db.user
         .findOne({
             where: { id_user: req.params.id_user },
         })
         .then((user) => {
             if (user) {
-                let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
+                let accessToken = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
                     expiresIn: 1440,
                 });
-                res.status(200).json({ token: token });
+                res.status(200).json({ token: accessToken });
             } else {
                 res.json("error le client n'est pas dans la base !!");
             }
@@ -139,27 +145,25 @@ router.get("/profil/:id_user", (req, res) => {
         });
 });
 
-/* 
-if(this.value.row == 5){
-    let url = ``;
-
-    fetch(url)
-        .then((response) =>
-            response.json()
-        .then((data) => {
-            console.log(data);
-            let affichage = '<ul>';
-            for (let vile of data) {
-                affichage += `<li><strong>${vile.nom}</strong> - ${ville.population} habitants</li>`;
-            }
-            affichage += '</ul>';
-            console.log(affichage);
-        })
-        )
-        .catch((err) => console.log('Erreur : ' + err));
-}; */
-
-
+router.get("/basicInfo/:id_user", (req, res) => {
+    db.user
+    .findOne({
+        where: { id_user: req.params.id_user },
+    })
+    .then((user) => {
+        if (user) {
+            let accessToken = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
+                expiresIn: 1440,
+            });
+            res.status(200).json({ token: accessToken, pseudo: req.body.pseudo });
+        } else {
+            res.json("error le client n'est pas dans la base !!");
+        }
+    })
+    .catch((err) => {
+        res.json(err);
+    });
+});
 
 router.get('/commerce', (req,res) => {
     // axios
@@ -185,7 +189,6 @@ router.get('/donneeby/:mail', (req,res) => {
         });
 })
 
-
 router.get("/getById/:id", (req, res) => {
     db.commerce
         .findOne({
@@ -199,6 +202,24 @@ router.get("/getById/:id", (req, res) => {
         });
 });
 
+/* 
+if(this.value.row == 5){
+    let url = ``;
 
+    fetch(url)
+        .then((response) =>
+            response.json()
+        .then((data) => {
+            console.log(data);
+            let affichage = '<ul>';
+            for (let vile of data) {
+                affichage += `<li><strong>${vile.nom}</strong> - ${ville.population} habitants</li>`;
+            }
+            affichage += '</ul>';
+            console.log(affichage);
+        })
+        )
+        .catch((err) => console.log('Erreur : ' + err));
+}; */
 
 module.exports = router;
