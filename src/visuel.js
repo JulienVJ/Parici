@@ -31,21 +31,27 @@ export const Index = () => {
           src="https://www.w3schools.com/howto/img_avatar2.png"
           alt="profile img"
         />
-        <span className="welcome-msg">Bonjour, nomutilisateur</span>
+
+        <span className="welcome-msg">Bonjour, Nathalie</span>
+
       </div>
       <ul id="pref">
         <li>degustation</li>
         <li>artisanat</li>
         <li>fabrication</li>
+        <li>textile</li>
+        <li>tourisme</li>
         <li>terroirs français</li>
       </ul>
       <div id="fav" className="cat">
         <span>Vos circuits favoris</span>
         <ul className="track-list-container">
-          {tracks.map((track) => {
+          {tracks.map((track, index) => {
             if (track.isFavorite) {
               return (
                 <TrackCard
+                  index={index}
+
                   img={track.img}
                   alt={track.alt}
                   title={track.title}
@@ -58,10 +64,12 @@ export const Index = () => {
       <div id="last" className="cat">
         <span>Vos derniers circuits</span>
         <ul className="track-list-container">
-          {tracks.map((track) => {
+          {tracks.map((track, index) => {
             if (track.done) {
               return (
                 <TrackCard
+                  index={index}
+
                   img={track.img}
                   alt={track.alt}
                   title={track.title}
