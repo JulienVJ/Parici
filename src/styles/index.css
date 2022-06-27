@@ -1,8 +1,9 @@
- :root{
+:root {
   overflow-x: hidden;
+  transition: 300ms ease-in-out;
 }
 
-#homePage{
+#homePage {
   margin: 0 2vw;
   display: flex;
   flex-direction: column;
@@ -10,32 +11,47 @@
   justify-content: space-evenly;
 }
 
-#profile{
+#profile {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-#profile .pfp{
+#profile .pfp {
   max-width: 30%;
   border-radius: 50%;
 }
-.welcome-msg{
-  margin:0 auto;
+
+.welcome-msg {
+  margin: 0 auto;
 }
 
-#pref li{
+#pref {
   display: flex;
-  display: inline-block;
-  border: solid black 1px;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#pref li {
+  border: solid #0F172A 1px;
   border-radius: 30px;
-  padding: 5px 5px;
+  padding: 2vw;
+  margin: 0 0.25vw;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 13px;
-  margin: 0 1vw;
+  background: #02203c;
+  color: #F8FAFC;
 }
-#homePage{
+#pref li:hover {
+  background: #e9d88b;
+  border: none;
+  color: #334155;
+}
+
+#homePage {
   margin: 0 2vw;
   display: flex;
   flex-direction: column;
@@ -43,20 +59,21 @@
   justify-content: space-evenly;
 }
 
-#profile{
+#profile {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-#profile .pfp{
+#profile .pfp {
   max-width: 30%;
   border-radius: 50%;
 }
-.welcome-msg{
-  margin:0 auto;
+
+.welcome-msg {
+  margin: 0 auto;
 }
 
-.cat .track-list-container{
+.cat .track-list-container {
   display: flex;
   flex-direction: row;
   height: auto;
@@ -69,8 +86,7 @@
   width: 100%;
   z-index: 1;
 }
-
-.cat .track-list-container .track-object{
+.cat .track-list-container .track-object {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,11 +97,8 @@
   cursor: pointer;
   text-align: left;
 }
-
-.cat .track-list-container .track-object img{
-  width :33vw;
-  height:auto;
+.cat .track-list-container .track-object img {
+  width: 33vw;
+  height: auto;
   border-radius: 10px;
-}
-
-
+}/*# sourceMappingURL=index.css.map */

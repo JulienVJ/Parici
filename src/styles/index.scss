@@ -1,0 +1,114 @@
+$primary500: #02203c;
+$secondary500: #e9d88b;
+$terticiary500: #ad6327;
+$gray50:#F8FAFC;
+$gray100:#F1F5F9;
+$gray200:#E2E8F0;
+$gray300:#CBD5E1;
+$gray400:#94A3B8;
+$gray500:#64748B;
+$gray600:#475569;
+$gray700:#334155;
+$gray800:#1E293B;
+$gray900:#0F172A;
+:root{
+    overflow-x: hidden;
+    transition: 300ms ease-in-out;
+  }
+  
+  #homePage{
+    margin: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+  }
+  
+  #profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .pfp{
+        max-width: 30%;
+        border-radius: 50%;
+      }
+  }
+  .welcome-msg{
+    margin:0 auto;
+  }
+  #pref{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #pref li{
+    border: solid $gray900 1px;
+    border-radius: 30px;
+    padding: 2vw;
+    margin: 0 0.25vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    background: $primary500;
+    color: $gray50;
+    &:hover{
+        background: $secondary500;
+        border: none;
+        color: $gray700;
+    }
+  }
+  #homePage{
+    margin: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+  }
+  
+  #profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .pfp{
+        max-width: 30%;
+        border-radius: 50%;
+      }
+  }
+  .welcome-msg{
+    margin:0 auto;
+  }
+  
+  .cat .track-list-container{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    overflow: scroll;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    .track-object{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        margin: 0 2vw;
+        margin-bottom: 20px;
+        transition: opacity 400ms;
+        cursor: pointer;
+        text-align: left;
+        img{
+            width :33vw;
+            height:auto;
+            border-radius: 10px;
+          }
+          
+          
+      }
+  }  
