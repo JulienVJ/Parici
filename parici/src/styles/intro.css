@@ -1,0 +1,85 @@
+@import "base.css";
+
+.introPicture{
+    width: 394px;
+    height: 600px;
+}
+
+.textBlock{
+    position: absolute;
+    top:410px;
+    background-color: white;
+    border-radius: 100px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 101%;
+    height: 400px;
+}
+
+#carrousel{
+    display: flex;
+    top:30px;
+    left: 150px;
+    position: absolute;
+}
+
+.cercles{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: grey;
+    transition: width 2s;
+}
+
+.changeCercle{
+    background-color: blue;
+    width: 50px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+
+#buttonNext{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    color: white;
+    background-color: orange;
+}
+
+#footerBlock{
+    display: flex;
+    justify-content: space-around;
+}
+
+#footerEnd{
+    display: none;
+    justify-content: center ;
+}
+
+
+#Start{
+    color: white;
+    background-color: orange;
+    width: 160px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+#skip{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#titlePart, #bioPart{
+    margin-left: 45px;
+}
+
+#bioPart{
+    width: 300px;
+    margin-bottom: 60px;
+}

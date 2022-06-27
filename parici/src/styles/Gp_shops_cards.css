@@ -1,0 +1,149 @@
+@import 'base.css';
+
+  .sh-slider {
+    position: absolute;
+    top:10%;
+    width:100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .arrows-wrapper {
+    width:100%;
+    margin-top: 0.5em;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .sh-right-arrow, .sh-left-arrow {
+    text-align: center;
+    margin:0.2em;
+    padding: 15px;
+    font-size: 3rem;
+    background-color:  #0054A3;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 19;
+    cursor: pointer;
+   
+  }
+
+  .sh-left-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .sh-left-arrow:active, .sh-right-arrow:active {
+    background-color: #00a393;
+    transition: 0.5s ease;
+  }
+
+  .sh-left-arrow:hover, .sh-right-arrow:hover {
+      color: yellow;
+      transition: 0.5s ease;
+  }
+  
+
+
+  .sh-slide {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .sh-slide.sh-active{
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  
+  .sh-carousel-wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding:0.5em;
+    border:none;
+    background-color: transparent;
+  }
+  
+  
+  .sh-map-wrapper {
+    position: relative;
+    height: 5%;
+    width:100%;
+    border-radius: 10px;
+  }
+
+  .sh-map-wrapper span {
+    display: flex;
+    align-items: center;
+    padding:0.2em;
+    position:absolute;
+    z-index: 112;
+    right:0;
+    top:0;
+    font-size: 1.5em;
+    color:#0054A3;
+    background-color: #fff;
+    opacity: 0.5;
+    border-radius: 0  0 0 10px;
+  }
+
+  .sh-map-wrapper span:hover {
+    opacity:1;
+  }
+  
+  .sh-title-wrapper {
+    position:absolute;
+    bottom:0;
+    left:5%;
+    right:5%;
+    z-index:99;
+    padding: 0.2em 0;
+    background-color: #fff;
+    opacity: 0.9;
+    border: 1.5px solid #0054A3;
+    border-radius: 10px;
+    transform: translateY(30%);
+    text-align: center;
+    color:#0054A3;
+    font-weight: 900;
+  }
+  
+  .sh-title-wrapper h1 {
+    font-size: 0.8em;
+  }
+  
+  
+  .sh-map {
+    position: inherit;
+    z-index: -1;
+    width:100%;
+    height:auto;
+    border-radius: 20px;
+  }
+  
+  .sh-information-wrapper {
+    width:100%;
+  }
+   
+  .sh-information-wrapper h2 {
+    margin: 0.8em 0.2em;
+    font-size: 1em;
+  }
+  
+  .sh-btn {
+    background-color: #0054A3;
+    color: #fff;
+    text-align: center;
+    width:50%;
+    min-width:120px;
+    max-width: 120px;
+    border-radius: 10px;
+    padding: 0.2em 0;
+  }
