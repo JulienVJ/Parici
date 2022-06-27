@@ -31,7 +31,9 @@ export const Index = () => {
           src="https://www.w3schools.com/howto/img_avatar2.png"
           alt="profile img"
         />
+
         <span className="welcome-msg">Bonjour, Nathalie</span>
+
       </div>
       <ul id="pref">
         <li>degustation</li>
@@ -49,6 +51,7 @@ export const Index = () => {
               return (
                 <TrackCard
                   index={index}
+
                   img={track.img}
                   alt={track.alt}
                   title={track.title}
@@ -66,6 +69,7 @@ export const Index = () => {
               return (
                 <TrackCard
                   index={index}
+
                   img={track.img}
                   alt={track.alt}
                   title={track.title}

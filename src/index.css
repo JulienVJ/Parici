@@ -25,16 +25,20 @@
 
 #pref li{
   display: flex;
+
   justify-content: space-around;
   display: inline-block;
   border: solid black 1px;
   border-radius: 30px;
   /* padding: 5px; */
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 13px;
+
   /* margin: 0 1vw; */
+
 }
 #homePage{
   margin: 0 2vw;
