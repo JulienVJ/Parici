@@ -1,0 +1,16 @@
+
+#button{
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    height: 25px;
+  
+  }
+  
+  #arrow-svg{
+    width: 200px;
+  }
+  
+  #svg{
+    border: none;
+  }
