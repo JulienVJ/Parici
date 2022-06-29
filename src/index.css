@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ :root{
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#homePage{
+  margin: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
 }
+
+#profile{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#profile .pfp{
+  max-width: 30%;
+  border-radius: 50%;
+}
+.welcome-msg{
+  margin:0 auto;
+}
+
+#pref li{
+  display: flex;
+
+  justify-content: space-around;
+  display: inline-block;
+  border: solid black 1px;
+  border-radius: 30px;
+  /* padding: 5px; */
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+
+  /* margin: 0 1vw; */
+
+}
+#homePage{
+  margin: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+}
+
+#profile{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#profile .pfp{
+  max-width: 30%;
+  border-radius: 50%;
+}
+.welcome-msg{
+  margin:0 auto;
+}
+
+.cat .track-list-container{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  overflow: scroll;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.cat .track-list-container .track-object{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin: 0 2vw;
+  margin-bottom: 20px;
+  transition: opacity 400ms;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cat .track-list-container .track-object img{
+  width :33vw;
+  height:auto;
+  border-radius: 10px;
+}
+
+
