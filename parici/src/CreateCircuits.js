@@ -9,6 +9,7 @@ const CreateCircuits = () => {
   const [selectedRadio, setSelectedRadio] = useState("");
   const [nameCircuit, setNameCircuit] = useState("");
   const [descriptionCircuit, setDescriptionCircuit] = useState("");
+  const [randomImage, setRandomImage] = React.useState('');
 
 
   const arrondissements = [
@@ -60,6 +61,35 @@ const CreateCircuits = () => {
     "Autre",
   ];
 
+  // pour insérer des image aléatoirement pour nos circuits
+  const renderImage = () => {
+    const Images = [
+      { image: 'https://images.unsplash.com/photo-1597758464605-aa125b827c33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2VyYW1pY3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=1400&q=60',
+        alt: "ceremique fav",
+    },
+      { image: 'https://images.unsplash.com/photo-1611512429151-780176f93478?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2luZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=1400&q=60',
+        alt: "circuit oenologique",
+    },
+      { image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8amFwYW5lc2UlMjBmb29kfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=1400&q=60',
+        alt: "cuisine jap"
+    },
+      { image: 'https://images.unsplash.com/photo-1536266305399-b367feb671f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', alt: "pot artisan" },
+      { image: 'https://images.unsplash.com/photo-1547240089-566513e12c89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        alt: "coffee"
+    },
+    { image: 'https://images.unsplash.com/photo-1526936393420-a8933ef19b64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80', alt: "fleuriste"},
+    { image: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', alt:"restaurant"},
+    { image: 'https://images.unsplash.com/photo-1560624052-449f5ddf0c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80', alt:"restaurant"},
+    { image: 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80', alt:"restaurant"},
+    { image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', alt:"plat"},
+  ];
+    const randomImageIndex = Math.floor(Math.random() * Math.floor(10));
+    return Images[randomImageIndex].image;
+  };
+  useEffect(() => {
+    setRandomImage(renderImage);
+  },[]);
+
   // appel de l'API grace à axios (à installer avec npm)
   useEffect(() => {
     axios
@@ -68,6 +98,7 @@ const CreateCircuits = () => {
       )
       .then((res) => setShopData(res.data.records));
   }, []);
+  
   // fonction pour mettre à jour les shop selon la catégorie choisie
   const handleOnChange = (e) => {
     e.preventDefault();
@@ -80,6 +111,7 @@ const CreateCircuits = () => {
       name_circuit: nameCircuit,
       description_circuit: descriptionCircuit,
       arrondissement: selectedRadio,
+      image_circuit: randomImage,
       magasin: saveChoice.toString(),
       circuit_magasin: saveChoice.toString(),
     })
@@ -104,7 +136,7 @@ const CreateCircuits = () => {
           <div>
             <form className="form" onChange={handleOnChange}>
               <div className="BtnCircuit">
-              <button className="createBtn" type="submit"><span class="material-icons">arrow_back</span></button>
+              <button className="backBtn" type="submit"><span class="material-icons">arrow_back</span></button>
               <button className="createBtn" type="submit" onClick={addCircuit}>Créer</button>
               </div>
               <div className="Input">

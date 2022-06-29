@@ -33,11 +33,6 @@ body{
 }
 
 
- .App {
- 
-  background-color: #eaf3ff;
-}
-
 .blocIcon{
   display: grid;
     grid-template-columns: 1fr 1fr 1fr;

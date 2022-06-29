@@ -22,10 +22,7 @@ router.post("/register", (req, res) => {
                 req.body.password = hash;
                 // on crée l'utilisateur avec les infos données pour chanque colonne de la table
                db.user.create (req.body)
-               /*  db.user.create({
-                    pseudo: req.body.pseudo,
-                    password: req.body.password,
-                }) */
+            
                 // si ça c'est bien passé crée moi un token
                 .then(useritem => {
                         let accessToken = jwt.sign(useritem.dataValues,

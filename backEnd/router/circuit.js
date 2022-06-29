@@ -39,9 +39,11 @@ router.post("/addNewCircuit", (req, res) => {
                                                 circuit: circuititem,
                                                 magasin: magasinitem,
                                                 circuitMagasin: circuitMagasinItem,
-                                                message: "ok magasin",
                                             });
                                         })
+                                        .catch(err => {
+                                            res.status(402).json(err)
+                                        });
 
                                 })
 
@@ -66,7 +68,9 @@ router.post("/addNewCircuit", (req, res) => {
 router.get("/allCircuit", (req, res) => {
     db.circuit
         .findAll({
-
+            include: [{
+                model: db.magasin,
+            }, ],
         })
         .then((circuits) => {
             if (circuits) {
@@ -81,6 +85,8 @@ router.get("/allCircuit", (req, res) => {
             res.json(err);
         });
 });
+
+
 
 router.delete("/deleteCircuit/:id_circuit", (req, res) => {
     db.circuit.findOne({
@@ -149,10 +155,27 @@ router.get('/findCircuitBy/:name_circuit', (req, res) => {
         })
 })
 
+router.get('/all/:limit/:offset', (req, res) => {
+    db.circuit.findAll({
+            limit: parseInt(req.params.limit),
+            offset: parseInt(req.params.offset),
+
+        })
+        .then(circuits => {
+            res.status(200).json({ circuits: circuits })
+        })
+        .catch(err => {
+            res.status(502).json("bad req" + err);
+        })
+});
+
 router.get("/getCircuitById/:id_circuit", (req, res) => {
     db.circuit
         .findOne({
-            where: { id_circuit: req.params.id_circuit }
+            where: { id_circuit: req.params.id_circuit },
+            include: [{
+                model: db.magasin,
+            }, ],
         })
         .then((circuits) => {
             res.status(200).json({ circuits: circuits });

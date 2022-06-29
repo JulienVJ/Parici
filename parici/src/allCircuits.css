@@ -1,0 +1,68 @@
+#BigTitle{
+    background: #0054A3;
+box-shadow: 3px 3px 16px rgba(0, 84, 163, 0.38), inset -10px -10px 20px #0C3963;
+border-radius: 10px;
+    color:white;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 220px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containeAllCircuit{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background: white;
+    padding: 15px 15px 0 15px;
+}
+.cardCircuit{
+    display: flex;
+    flex-direction: column;
+  
+}
+.nameCircuit{
+color: black;
+font-size: 1em;
+font-weight: 700;
+}
+.descriptCircuit{
+    color: rgb(33, 33, 33);
+    font-size: .90em;
+    font-weight: 100;
+}
+.BtnA {
+    display: flex;
+    flex-direction: row;
+    
+    padding-bottom: 16px;
+    column-gap: 18em;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.picture{
+    height: 180px;
+    width: 140px;
+    border-radius: 14px;
+}
+
+#sectionCard{
+    display: flex;
+    width:100%;
+    overflow: auto;
+    column-gap: 20px;
+}
+
+h3{
+    font-size: 15px;
+}
+
+p{
+    font-size: 13px;
+}

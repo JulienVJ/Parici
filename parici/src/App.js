@@ -3,6 +3,12 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import styled from "styled-components";
 import Home from './pages/Home';
+import Circuits from './pages/Circuits';
+import AllCircuits from './pages/AllCircuits';
+import CircuitDT from './pages/CircuitDT';
+
+
+
 import Map from './Map';
 import CreateCircuits from './CreateCircuits';
 
@@ -66,6 +72,11 @@ function App() {
         </div> */}
     <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/circuits" element={<Circuits />} />
+    <Route path="/CircuitDT/:id_circuit" element={<CircuitDT />} />
+
+    <Route path="/AllCircuits" element={<AllCircuits />} />
+
     <Route path="/profile/:id_user" element={<Profile pseudo={authState.pseudo}/>} />
       <Route path="/login" element={<div className="bodycontain"><AppContainer><AccountBox /></AppContainer></div>} />
     <Route path="/Map" element={<Map />} />

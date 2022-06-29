@@ -8,10 +8,10 @@ const Card = ({ shop, setSaveChoice }) => {
   return (
     <li className="card">
       <div className="infos">
-        <img
+       {/*  <img
           src="./img/img.jpg"
           alt={"Magasin " + shop.fields.nom_du_commerce}
-        />
+        /> */}
         <h2>{shop.fields.nom_du_commerce}</h2>
         <h4>{shop.fields.type_de_commerce}</h4>
         <p>
