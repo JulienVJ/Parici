@@ -10,6 +10,13 @@ import { GpSubscribe } from "./components/Gp_subscribe";
 import { MapA } from "./pages/MapA";
 import { WelcomePage } from "./pages/welcomePage.jsx";
 // import { Map } from "./pages/Map";
+
+
+// L'usage de react-icons est nécessaire pour afficher les icones de navigation et autres utilisées dans cette partie
+// Il faut donc tout d'abord l'importer : npm install react-icons --save
+// Regarder sur les liens d'import des icones dans la partie haute des pages et importer les modules : npm i <nom-du-module> 
+// Exemple : import { IconName } from "react-icons/md"; 
+
 // L'usage de ReactRouter est nécessaire (paquet npm => npm i react-router-dom)
 // Pour comprendre l'utilisation de React Router et ici de BrowserRouter, lire cette ressource:
 // https://github.com/remix-run/react-router/blob/main/docs/getting-started/installation.md 
