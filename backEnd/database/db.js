@@ -27,6 +27,10 @@ db.categorie = require("../models/Categorie")(dbinfo, Sequelize);
 db.subscriber = require("../models/Subscriber")(dbinfo, Sequelize);
 db.circuit = require("../models/Circuit")(dbinfo, Sequelize);
 db.favori = require("../models/Favori")(dbinfo, Sequelize);
+db.magasin = require("../models/Magasin")(dbinfo, Sequelize);
+db.circuit_magasin = require("../models/Circuit_magasin")(dbinfo, Sequelize);
+
+
 
 
 db.circuit.hasMany(db.categorie, { foreignKey: "id_circuit" });
@@ -34,6 +38,9 @@ db.circuit.hasMany(db.subscriber, { foreignKey: "id_circuit" });
 
 db.circuit.belongsToMany(db.user, { through: "favori", foreignKey: "id_circuit" });
 db.user.belongsToMany(db.circuit, { through: "favori", foreignKey: "id_user" });
+
+db.circuit.belongsToMany(db.magasin, { through: "circuit_magasin", foreignKey: "id_circuit" });
+db.magasin.belongsToMany(db.circuit, { through: "circuit_magasin", foreignKey: "id_magasin" });
 
 
 

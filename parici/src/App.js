@@ -3,10 +3,16 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import styled from "styled-components";
 import Home from './pages/Home';
+import Map from './Map';
+import CreateCircuits from './CreateCircuits';
+
+
+
+
 import { AccountBox } from "./components/accountBox";
 import {AuthContext} from './helpers/AuthContext';
 import { useState } from 'react';
-import Profile from './pages/Profile';
+import {Profile} from './pages/Profile';
 
 
 const AppContainer = styled.div`
@@ -22,7 +28,7 @@ width: 100%;
 
 function App() {
   const [authState, setAuthState] = useState({
-    pseudo: "",
+    pseudo: "nani",
     id_user: 0,
     status: false,
   });
@@ -36,14 +42,14 @@ function App() {
     <div className="App">
       <AuthContext.Provider value={{ authState, setAuthState }}>
     <BrowserRouter>
-        <div className="navbar">
+      {/*   <div className="navbar">
           <Link to = "/">Accueil</Link>
           {!localStorage && (
             <>
               <Link to = "/login">Connexion</Link>
             </>
           )}
-          {localStorage && (
+          {!localStorage && (
             <>
             <button onClick={logout} >Logout</button>
             </>
@@ -57,11 +63,17 @@ function App() {
            
          
 
-        </div>
+        </div> */}
     <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/profile/:id_user" element={<Profile />} />
+    <Route path="/profile/:id_user" element={<Profile pseudo={authState.pseudo}/>} />
       <Route path="/login" element={<div className="bodycontain"><AppContainer><AccountBox /></AppContainer></div>} />
+    <Route path="/Map" element={<Map />} />
+    <Route path="/CreateCircuits" element={<CreateCircuits />} />
+
+
+
+
     </Routes>
   </BrowserRouter>
   </AuthContext.Provider>
