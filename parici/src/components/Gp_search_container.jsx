@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles/Gp_search_container.css";
 
-
+// Composant qui se situe en bas du carrousel des choix de circuits en groupe où il est simplement écrit "Rechercher un groupe" avec une image.
 export const SearchGpCircuits = () => {
 
     return (

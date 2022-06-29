@@ -4,6 +4,7 @@ import { MdArrowForwardIos, MdOutlineShare } from "react-icons/md";
 
 import "../styles/Gp_shops_cards.css"
 
+// Slides de chaque commerce d'un circuit donné (selon sa route) sur la page de description d'un circuit
 const GpShopsSlider = ({ slides }) => {
 
     const [current, setCurrent] = useState(0);
@@ -50,12 +51,9 @@ const GpShopsSlider = ({ slides }) => {
                     <MdArrowForwardIos className='sh-right-arrow' onClick={nextSlide} />
                     </div>
                     
-                    
                 </div>
 
-                      )}
-
-                      
+                      )}        
             </div>
           );
 

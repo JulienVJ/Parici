@@ -8,6 +8,7 @@ import SwitchButton from "./Gp_switch_button";
 
 export const GpCircuitDescription = ({ data }) => {
 
+    // Données des commerces qui composent un circuit
     const SliderShops = [
         {
             id_gp_shop:1,
@@ -67,8 +68,14 @@ export const GpCircuitDescription = ({ data }) => {
         }
     ];
 
+    // Information permettant de savoir vers quelle page de description du circuit aller:
     const { route } = useParams();
 
+    /**
+     * Fonction qui sert à rabaisser ou remonter le panneau de description du circuit:
+     * Cela engendre une modification de nombreux composants de la page.
+     */
+    
     const toggleDescriptionCard = () => {
         const MainContainer = document.querySelector(".gp-description-main");
 
@@ -95,8 +102,6 @@ export const GpCircuitDescription = ({ data }) => {
             CircuitSteps.style.opacity = "0";
             MainContainer.style.height = '100vh';
             MainContainer.style.width = '100%';
-
-
             
         } else {
             switchButtons.style.opacity = "1";
@@ -119,8 +124,12 @@ export const GpCircuitDescription = ({ data }) => {
             <div className="gp-circuit-steps"><GpShopsSlider slides={SliderShops}/></div>
             <div className="gp-circuit-map" style={{ backgroundImage: `url(${MyImage})` }}></div>
          
+            {/* Ici on ne filtre que les informations issu du bon circuit 
+            c'est à dire équivalent à la valeur de la propriété "route" de l'objet qui liste les commerces d'un circuit et de l'url/:route */}
             {data.filter(card => card.route === route).map((card, index) => (
                 <main key={index} className='gp-description-main' >
+
+                    {/* Composant permettant d'afficher soit la liste des commerces du circuit soit une carte du circuit en fond de page */}
                     <SwitchButton />
                    
                     <div className="gp-card-container">
@@ -135,7 +144,10 @@ export const GpCircuitDescription = ({ data }) => {
                                     <li><span>Lieu de départ:</span> {card.departure}</li>
                                 </ul>
                             </div>
+
+                            {/* Lien pour s'inscrire au circuit qui va renvoyer à la page d'inscription de Salma (ici ça renvoit à un module temporaire)*/}
                             <Link className="gp-subscription-btn" to={card.subscribe}>Je m'inscris</Link>
+                            
                         </div>
                         <div className='gp-description-image' style={{ backgroundImage: `url(${card.map})` }}></div>
                     </div>

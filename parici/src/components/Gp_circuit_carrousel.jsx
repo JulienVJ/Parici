@@ -6,7 +6,7 @@ import { MdArrowBackIos, MdArrowForwardIos, MdOutlineShare } from "react-icons/m
 import "../styles/Gp_circuit_card.css";
 import "../styles/Gp_circuit_carrousel.css";
 
-
+// Ce sont ici les slides du carrousel de la page de défilement des différents circuits (importés de notre base des circuits).
 const GpCircuitsSlider = ({ slides }) => {
 
   const [current, setCurrent] = useState(0);
@@ -46,6 +46,8 @@ const GpCircuitsSlider = ({ slides }) => {
                     <h2> Date: {slide.date}</h2>
                     <h2> Participants: {slide.Subscribers}/{slide.totalNumber}</h2>
                 </div>
+                {/* Lien qui va renvoyer à la description du circuit lié à la slide présente via la sub-route de l'url avec react-router, 
+                cette route est celle de la propriété route de l'objet qui fournit les data du circuit. */}
                 <Link className="btn"  to={`/circuits-de-groupe/${slide.route}`}>En savoir plus</Link>
                 <div className="gp_counter"><h1>{slides.indexOf(slide)+1}/{slides.length}</h1></div>
             </div>

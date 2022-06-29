@@ -89,7 +89,22 @@
   }
 
   .message {
+    display:none;
     margin:3em 3em;
     font-size: 1em;
     color: #0054A3;
+  }
+
+  .message p {
+    margin-top:0.8em;
+    margin-bottom: 1em;
+    font-size: 0.8em;
+    color:#0054A3; 
+  }
+
+  .message.active {
+       display:flex;
+       flex-direction: column;
+       align-items:center;
+       justify-content:center;
   }
