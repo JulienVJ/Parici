@@ -29,8 +29,8 @@ const GpCircuitsSlider = ({ slides }) => {
       <MdArrowBackIos className='left-arrow' onClick={prevSlide} />
       <MdArrowForwardIos className='right-arrow' onClick={nextSlide} />
       {slides.map((slide, index) => {
-        
-        return (
+      
+        return ( 
           <div
             className={index === current ? 'slide active' : 'slide'}
             key={index}>

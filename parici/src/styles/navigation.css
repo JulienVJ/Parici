@@ -1,5 +1,19 @@
+.navigation {
+    position:absolute;
+    z-index:199;
+    bottom:0;
+    left:0;
+    width: 100%;
+    background-color:rgb(255, 255, 255,0.8);
+}
 .nav-links-container {
     display:flex;
     justify-content: space-around;
     height:5%;
+    padding-top:1em;
+}
+
+.nav-link  {
+    font-size: 1.5em;
+    color:#0054A3; 
 }

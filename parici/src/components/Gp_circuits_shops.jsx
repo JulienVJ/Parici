@@ -25,36 +25,42 @@ const GpShopsSlider = ({ slides }) => {
       <section className='sh-slider'>
         
         {slides.map((slide, index) => {
-          
-          return (
-            <div
-              className={index === current ? 'sh-slide sh-active' : 'sh-slide'}
-              key={index}>
-              {index === current && (
-             
-              <div className="sh-carousel-wrapper">
-                  <div className="sh-map-wrapper">
-                      <span><MdOutlineShare/></span>
-                      <img src={slide.image} alt='circuit en groupe' className='sh-map' />
-                      <div className='sh-title-wrapper'><h1>{slide.title}</h1></div>
-                  </div>
-                  <div className="sh-information-wrapper">
-                      <h2> Passage à {slide.step}</h2>
-                      <h2> Description: {slide.description}</h2>
-                      <h2> Horaires: {slide.time}</h2>
-                  </div>
-                  <a className="sh-btn"  href={slide.route}>Site web</a>
-                  <div className="arrows-wrapper">
-                  <MdArrowForwardIos className='sh-left-arrow' onClick={prevSlide} />
-                  <MdArrowForwardIos className='sh-right-arrow' onClick={nextSlide} />
-                  </div>
-                  
-                  
-              </div>
-              
-              )}
+          if(slide.zone === 12) {
+
+            return (
+              <div
+                className={index === current ? 'sh-slide sh-active' : 'sh-slide'}
+                key={index}>
+                {index === current && (
+               
+                <div className="sh-carousel-wrapper">
+                    <div className="sh-map-wrapper">
+                        <span><MdOutlineShare/></span>
+                        <img src={slide.image} alt='circuit en groupe' className='sh-map' />
+                        <div className='sh-title-wrapper'><h1>{slide.title}</h1></div>
+                    </div>
+                    <div className="sh-information-wrapper">
+                        <h2> Passage à {slide.step}</h2>
+                        <h2> Description: {slide.description}</h2>
+                        <h2> Horaires: {slide.time}</h2>
+                    </div>
+                    <a className="sh-btn"  href={slide.route}>Site web</a>
+                    <div className="arrows-wrapper">
+                    <MdArrowForwardIos className='sh-left-arrow' onClick={prevSlide} />
+                    <MdArrowForwardIos className='sh-right-arrow' onClick={nextSlide} />
+                    </div>
+                    
+                    
+                </div>
+
+                      )}
+
+                      
             </div>
           );
+
+          }
+          
         })}
      
       </section>

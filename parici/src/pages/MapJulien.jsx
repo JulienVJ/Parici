@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/map.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
-function Map() {
+import {
+  MapContainer,
+  TileLayer,
+  useMap,
+  Marker,
+  Popup
+} from 'https://cdn.esm.sh/react-leaflet'
+export function Map() {
   const [shopData, setShopData] = useState([]);
-
-  // useEffect(
-    
-  //         function updatePathOptions() {
-  //               if (props.pathOptions !== optionsRef.current) {
-  //               var options = props.pathOptions ?? {};
-  //               element.instance.setStyle(options);
-  //               optionsRef.current = options;
-  //               }
-  //         })
 
   // appel de l'API grace à axios (à installer avec npm)
   useEffect(() => {

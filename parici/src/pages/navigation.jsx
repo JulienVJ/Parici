@@ -1,5 +1,9 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
+import { FiMap } from "react-icons/fi";
+import { RiCompassLine } from "react-icons/ri";
+import { HiUserGroup } from "react-icons/hi";
 import "../styles/navigation.css";
 
 
@@ -7,7 +11,9 @@ import "../styles/navigation.css";
 export function Navigation() {
 
     return (
+
         <>
+            <Outlet />
             <div className='navigation'>
                 <div className='logo-container'>
                     {/* Ici se trouvera le logo */}
@@ -16,15 +22,18 @@ export function Navigation() {
                 {/* Juste pour le test, voici deux liens */}
                 <div className='nav-links-container'>
                     <Link className='nav-link' to='/'>
-                        ACCUEIL
+                        <FaHome />
+                    </Link>
+                    <Link className='nav-link' to='carte'>
+                        <RiCompassLine />
                     </Link>
                     <Link className='nav-link' to='circuits-de-groupe'>
-                        GROUPES
+                        <HiUserGroup />
                     </Link>
                 </div>
             </div>
 
-            <Outlet />
+
 
         </>
     )
