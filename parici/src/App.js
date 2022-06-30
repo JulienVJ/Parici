@@ -8,7 +8,9 @@ import { Navigation } from "./pages/navigation";
 import { GpCircuitDescription } from "./components/Gp_description_circuit";
 import { GpSubscribe } from "./components/Gp_subscribe";
 import { MapA } from "./pages/MapA";
-import { WelcomePage } from "./pages/welcomePage.jsx";
+import  { Home } from "./pages/Accueil.jsx";
+import { CreateCircuits } from "./pages/CreateCircuits";
+
 // import { Map } from "./pages/Map";
 
 
@@ -132,7 +134,8 @@ function App() {
           <Route path="circuits-de-groupe/:route/:subscribe" element={<GpSubscribe data={SliderData} />} />
           
           {/* Page de Mia - on y va via "Commencer" de la page d'accueil faite par Mathias */}
-          <Route path="Home" element={<WelcomePage/>} />
+          <Route path="Home" element={<Home/>} />
+          <Route path="Circuits" element={<CreateCircuits/>} />
           <Route path="carte" element={<MapA/>} />
         </Route>
       </Routes>

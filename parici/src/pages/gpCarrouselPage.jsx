@@ -7,7 +7,7 @@ export function GpCircuitsPage({slides}){
    
 
     return(
-        <div className='gp-selected-page-container'> 
+        <div className='wrapper gp-selected-page-container'> 
   
             <GpCircuitsSlider  slides={slides} />
             <SearchGpCircuits  />  

@@ -37,7 +37,7 @@ const Intro = () => {
 
     return (
        
-        <div>
+        <div className='wrapper'>
         <Outlet />
         <img
             className='introPicture'

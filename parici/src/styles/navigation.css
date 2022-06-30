@@ -1,11 +1,27 @@
+
 .navigation {
-    position:absolute;
+    position: fixed;
+    bottom: 0;
     z-index:199;
+    left:0;
+    width: 100%;
+    background-color:rgb(255, 255, 255,0.8);
+} 
+
+.wrapper {
+    overflow-y:scroll;
+    height: 90%;
+}
+
+.navigation.sticky {
+    position:fixed;
     bottom:0;
+    z-index:199;
     left:0;
     width: 100%;
     background-color:rgb(255, 255, 255,0.8);
 }
+
 .nav-links-container {
     display:flex;
     justify-content: space-around;

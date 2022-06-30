@@ -10,21 +10,33 @@ import "../styles/navigation.css";
 // Il s'agit du header : sa partie navigation
 export function Navigation() {
 
+    window.addEventListener('scroll', function() {
+        
+        const header = document.querySelector(".navigation");
+        const hundredVh = document.querySelector(".hundredvh");
+        
+        if(Math.round(window.pageYOffset) > 0) {
+            header.classList.add("sticky");
+            
+        } else {
+            header.classList.remove("sticky");
+            
+        }
+
+      });
+
     return (
 
         <>
             <Outlet />
+        
             <div className='navigation'>
-                <div className='logo-container'>
-                    {/* Ici se trouvera le logo */}
-                </div>
-
-                {/* Juste pour le test, voici deux liens */}
+              
                 <div className='nav-links-container'>
                     <Link className='nav-link' to='/'>
                         <FaHome />
                     </Link>
-                    <Link className='nav-link' to='carte'>
+                    <Link className='nav-link' to='Circuits'>
                         <RiCompassLine />
                     </Link>
                     <Link className='nav-link' to='circuits-de-groupe'>

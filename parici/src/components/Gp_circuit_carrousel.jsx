@@ -24,21 +24,44 @@ const GpCircuitsSlider = ({ slides }) => {
     return null;
   }
 
+  window.addEventListener('load', () =>  { 
+    const ShareToFb = document.querySelector(".fb-share-button");
+    ShareToFb.classList.add("close");
+  })
+
+  function ShareToNetwork() {
+    const ShareToFb = document.querySelector(".fb-share-button");
+    const ShareBtn = document.querySelector(".map-wrapper span");
+    if(ShareToFb.classList.contains("open")){
+        ShareToFb.classList.remove("open");
+        ShareToFb.classList.add("close");
+    } else {
+      ShareToFb.classList.remove("close");
+      ShareToFb.classList.add("open");
+    }
+    
+    
+  }
+      
   return (
+    <>
     <section className='slider'>
+  
       <MdArrowBackIos className='left-arrow' onClick={prevSlide} />
       <MdArrowForwardIos className='right-arrow' onClick={nextSlide} />
       {slides.map((slide, index) => {
       
-        return ( 
+        return (
+           
           <div
             className={index === current ? 'slide active' : 'slide'}
             key={index}>
             {index === current && (
             <div className="carousel-wrapper">
                 <div className="map-wrapper">
-                    <span><MdOutlineShare/></span>
-                    <img src={slide.map} alt='circuit en groupe' className='map' />
+                    <span> <MdOutlineShare onClick={ShareToNetwork} /></span>
+                   
+                    <img src={slide.map} alt='circuit en groupe' className='map-img-gp' />
                     <div className='title-wrapper'><h1>{slide.title}</h1></div>
                 </div>
                 <div className="information-wrapper">
@@ -57,6 +80,12 @@ const GpCircuitsSlider = ({ slides }) => {
         );
       })}
     </section>
+        <div className="SocialWrapper">
+         <div className="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small">
+         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore"> 
+         </a></div>
+         </div>
+        </>
   );
 };
 
